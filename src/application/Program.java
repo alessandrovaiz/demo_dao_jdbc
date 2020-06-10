@@ -11,10 +11,8 @@ public class Program {
 
 	public static void main(String[] args) {
 		
-		Department obj = new Department(1,"Books");
-		Seller seller = new Seller(21,"Altair","teste@teste",new Date(), 1000.00,obj);
-		
 		SellerDao sellerDao = DaoFactory.createSellerDao();
+		Seller seller = sellerDao.findById(2);
 		System.out.println(seller);
 
 	}
